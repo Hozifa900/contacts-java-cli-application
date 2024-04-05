@@ -1,0 +1,5 @@
+1- The user of the application should be able to search through the contacts
+
+2- The user of the application should be able to add new contacts, update existing contacts, and delete old contacts
+
+3- The user of the application should be able to merge duplicate contacts
