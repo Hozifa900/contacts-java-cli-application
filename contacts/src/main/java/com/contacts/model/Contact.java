@@ -37,15 +37,53 @@ public class Contact {
     }
 
     public void addEmail(String email, String label) {
-        Phone e = new Phone(email, label);
-        phones.add(e);
+        Email e = new Email(email, label);
+        emails.add(e);
     }
 
     @Override
     public String toString() {
+        StringBuilder stringPhone = new StringBuilder();
+        StringBuilder stringEmail = new StringBuilder();
+        stringPhone.append("[");
+        if (phones.size() > 0) {
+            for (int i = 0; i < phones.size(); i++) {
+                if (i < phones.size() - 1) {
+                    stringPhone.append("{");
+                    stringPhone.append("phone:" + phones.get(i).getPhone() + ", ");
+                    stringPhone.append("label:" + phones.get(i).getLabel());
+                    stringPhone.append("},");
+                } else {
+                    stringPhone.append("{");
+                    stringPhone.append("phone:" + phones.get(i).getPhone() + ", ");
+                    stringPhone.append("label:" + phones.get(i).getLabel());
+                    stringPhone.append("}");
+                }
+            }
+        }
+        stringPhone.append("]");
+
+        stringEmail.append("[");
+        if (emails.size() > 0) {
+            for (int i = 0; i < emails.size(); i++) {
+                if (i < emails.size() - 1) {
+                    stringEmail.append("{");
+                    stringEmail.append("Email: " + emails.get(i).getEmail() + ", ");
+                    stringEmail.append("label: " + emails.get(i).getLabel());
+                    stringEmail.append("},");
+                } else {
+                    stringEmail.append("{");
+                    stringEmail.append("Email: " + emails.get(i).getEmail() + ", ");
+                    stringEmail.append("label: " + emails.get(i).getLabel());
+                    stringEmail.append("}");
+                }
+            }
+        }
+        stringEmail.append("]");
+
         return String.format(
-                "\t{ \"productId\":%d, \"firstName\":\"%s\", \"lastName\":\"%s\",   \"company\":%s\", \"jobTitle\":%s\" }",
-                contactId, firstName, lastName, company, jobTitle);
+                "\t{ \"productId\":%d, \"firstName\":\"%s\", \"lastName\":\"%s\",   \"company\":\"%s\", \"jobTitle\":\"%s\", \"phones\":%s, \"emails\":%s} }",
+                contactId, firstName, lastName, company, jobTitle, stringPhone, stringEmail);
     }
 
 }
