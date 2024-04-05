@@ -48,43 +48,4 @@ public class Contact {
                 contactId, firstName, lastName, company, jobTitle);
     }
 
-    // @Override
-    // public String toString() {
-    // return String.format("\t{ \"contactId\":%d, \"firstName\":\"%s\",
-    // \"lastName\":\"%s\",
-    // \"company\":\"%s\", \"jobTitle\":\"%s\" }",
-    // contactId, firstName, lastName, company, jobTitle);
-    // }
-
-    // {\"firstName\":\"%s\",\"firstName\":\"%s\",}
-
-    // @Override
-    // public String toString() {
-    // final StringBuilder sb = new StringBuilder("Product{");
-    // sb.append("productId=").append(productId);
-    // sb.append(", name='").append(name).append('\'');
-    // sb.append(", dateSupplied=").append(dateSupplied);
-    // sb.append(", quantityInStock=").append(quantityInStock);
-    // sb.append(", unitPrice=").append(unitPrice);
-    // sb.append('}');
-    // return sb.toString();
-    // }
-
-    // public String toJSONString() {
-    // return String.format("\t{ \"productId\":%d, \"name\":\"%s\",
-    // \"dateSupplied\":\"%s\", \"quantityInStock\":%d, \"unitPrice\":%,.2f }",
-    // productId, name, dateSupplied, quantityInStock, unitPrice);
-    // }
-
-    // public String toXMLString() {
-    // return String.format("\t<product productId=\"%d\" name=\"%s\"
-    // dateSupplied=\"%s\" quantityInStock=\"%d\" unitPrice=\"%,.2f\" />",
-    // productId, name, dateSupplied, quantityInStock, unitPrice);
-    // }
-
-    // public String toCSVString() {
-    // return String.format("%d, %s, %s, %d, %.2f",
-    // productId, name, dateSupplied, quantityInStock, unitPrice);
-    // }
-
 }
